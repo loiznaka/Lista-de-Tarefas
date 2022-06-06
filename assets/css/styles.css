@@ -11,9 +11,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: black;
-    background-image: url('/Lista-de-Tarefas/assets/img/background.jpg');
-    background-repeat: no-repeat;
+    background: url('/Estudos/JavaScript/Lista-de-Tarefas/img/background.jpg');
+    background-size: auto;
 }
 
 .container {
@@ -27,10 +26,9 @@ body {
     padding: 20px;
     border: 2px solid green;
     border-radius: 30px;
-    background-image: url('/Lista-de-Tarefas/assets/img/background-tasks.jpg');
+    background-image: url('/Estudos/JavaScript/Lista-de-Tarefas/img/background-tasks.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: white;
 }
 
 h1{
