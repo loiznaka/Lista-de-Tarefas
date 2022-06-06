@@ -15,13 +15,22 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 50px;
     margin-bottom: 10px;
     color: green;
 }
 
-input {
-    align-items: center;
+.container {
+    min-width: auto;
+    min-height: px;
+    margin-top: 50px;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 30px;
+}
+
+#list {
+    border: 2px solid black;
+    min-height: 300px;
 }
 
 #task-form {
@@ -94,4 +103,19 @@ input {
 :checked + label {
     text-decoration: line-through;
     color: gray;
+}
+
+#list .backup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.backup .savebtn, .loadbtn{
+    width: 200px;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }

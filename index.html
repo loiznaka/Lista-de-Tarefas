@@ -8,14 +8,18 @@
     <title>Lista de Tarefas</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h1>Lista de Tarefas</h1>
         <div id="list">
             <form id="task-form">
                 <input id="task-input" name="tarefa" type="text" placeholder="Digite sua tarefa" />
-                <button type="submit">Adicionar</button>
+                <button type="submit" class="addbtn">Adicionar</button>
             </form>
             <div id="tasks"></div>
+            <div class="backup">
+                <button class="savebtn" type="submit">Salvar</button>
+                <button class="loadbtn" type="submite">Carregar</button>
+            </div>
         </div>
     </div>
     <script src="./assets/scripts/script.js"></script>
