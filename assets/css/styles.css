@@ -30,11 +30,12 @@ input {
     justify-content: center
 }
 
-#task-input {
+#task-form input {
     text-align: center;
     width: 20rem;
     margin-right: 5px;
-
+    color: black;
+    font-weight: 600;
 }
 
 #task-form button {
@@ -55,7 +56,6 @@ input {
 }
 
 #tasks {
-    display: flex;
     flex-direction: column;
     max-width: 500px;
     margin-top: 10px;
@@ -65,11 +65,30 @@ input {
 .task-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 5px;
 }
 
+.task-item input[type='checkbox'] {
+    flex-grow: 1;
+    justify-self: flex-start;
+    max-width: 10px;
+}
+
 .task-item label {
-    margin-left: 5px;
+    margin: 0 2px;
+    flex-grow: 2;
+}
+
+.task-item #removeButton {
+    flex-grow: 1;
+    max-width: 50px;
+    border: 1px solid green;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 5px;
 }
 
 :checked + label {

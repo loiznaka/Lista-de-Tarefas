@@ -20,28 +20,38 @@ form.onsubmit = function(e) {
 // Função de adicionar tarefa
 function addTask(description) {
     // Variáveis constantes
-    // Criar div da tarefa
-    const taskContainer = document.createElement('div');
-    //Criar um input da tarefa
-    const newTask = document.createElement('input');
-    //Criar uma label para tarefa
+    const taskContainer = document.createElement('div'); // node
+    //Criar um input da nova tarefa
+    const newTask = document.createElement('input'); // textnode
+    //Criar uma label para nova tarefa
     const taskLabel = document.createElement('label');
-    //Escrever o texto da tarefa
+    //Escrever o texto da nova tarefa
     const taskDescriptionNode = document.createTextNode(description);
+    //Botão remover
+    const removeTask = document.createElement('input');
+
+    //Evento de exclusão quando clicar em excluir
+    removeTask.addEventListener('click', function(e) {
+        taskContainer.parentNode.removeChild(taskContainer);
+    }, false);
 
     //Atributos da tarefa
     newTask.setAttribute('type', 'checkbox');
     newTask.setAttribute('name', description);
     newTask.setAttribute('id', description);
+    removeTask.setAttribute('type', 'button');
+    removeTask.setAttribute('value', 'Excluir');
+    removeTask.setAttribute('id', 'removeButton');
 
     //Atributos do texto
     taskLabel.setAttribute('for', description)
     taskLabel.appendChild(taskDescriptionNode);
 
-    //Realiza a incerção dos 
-    taskContainer.classList.add('task-item'); // Div class task-item
-    taskContainer.appendChild(newTask); // Input
-    taskContainer.appendChild(taskLabel); // Label
+    //Realiza a incerção dos items
+    taskContainer.classList.add('task-item'); 
+    taskContainer.appendChild(newTask); 
+    taskContainer.appendChild(taskLabel); 
+    taskContainer.appendChild(removeTask); 
 
     //Insere dentro da div id='tasks'
     taskList.appendChild(taskContainer);
