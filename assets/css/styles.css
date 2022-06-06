@@ -11,32 +11,41 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: green;
+    background-color: black;
+    background-image: url('/Lista-de-Tarefas/assets/img/background.jpg');
+    background-repeat: no-repeat;
 }
 
 .container {
-    min-width: auto;
-    min-height: px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: auto;
+    min-height: 300px;
     margin-top: 50px;
     padding: 20px;
     border: 2px solid green;
     border-radius: 30px;
+    background-image: url('/Lista-de-Tarefas/assets/img/background-tasks.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+h1{
+    margin-bottom: 10px;
+    color: green;
 }
 
 #list {
-    border: 2px solid black;
-    min-height: 300px;
+    margin: 0 20px;
 }
 
 #task-form {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 #task-form input {
@@ -65,8 +74,10 @@ h1 {
 }
 
 #tasks {
+    flex-grow: 2;
     flex-direction: column;
     max-width: 500px;
+    min-height: 200px;
     margin-top: 10px;
     padding: 2px;
 }
@@ -87,6 +98,7 @@ h1 {
 .task-item label {
     margin: 0 2px;
     flex-grow: 2;
+    font-weight: 600;
 }
 
 .task-item #removeButton {
